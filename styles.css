@@ -871,3 +871,398 @@ button:focus-visible {
         animation-iteration-count: 1 !important;
     }
 }
+
+/* =========================================================
+   SECTION 1 — HERO
+   ========================================================= */
+
+.hero-section {
+    padding: 54px 0 70px;
+    min-height: calc(100vh - var(--header-height));
+    min-height: calc(100svh - var(--header-height));
+
+    display: flex;
+    align-items: center;
+
+    overflow: hidden;
+}
+
+
+/* ---------------------------------------------------------
+   HERO LAYOUT
+   --------------------------------------------------------- */
+
+.hero-container {
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1.9fr)
+        minmax(260px, 0.9fr);
+
+    align-items: center;
+
+    gap: 20px;
+}
+
+
+/* ---------------------------------------------------------
+   HERO COPY
+   --------------------------------------------------------- */
+
+.hero-copy {
+    position: relative;
+
+    z-index: 2;
+
+    text-align: center;
+
+    padding: 30px 0 20px;
+}
+
+.hero-eyebrow {
+    margin-bottom: 12px;
+
+    color: var(--color-primary);
+
+    font-size: 18px;
+    font-weight: 800;
+
+    letter-spacing: -0.01em;
+}
+
+
+.hero-title {
+    display: flex;
+    flex-direction: column;
+
+    margin: 0;
+
+    color: var(--color-text);
+
+    font-size: clamp(66px, 6.3vw, 104px);
+    font-weight: 850;
+
+    line-height: 0.94;
+    letter-spacing: -0.065em;
+}
+
+.hero-title span {
+    display: block;
+}
+
+
+/* ---------------------------------------------------------
+   THREE STEPS
+   --------------------------------------------------------- */
+
+.hero-steps {
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 12px;
+
+    margin-top: 34px;
+}
+
+.hero-step {
+    position: relative;
+
+    padding: 0 12px;
+}
+
+.hero-step:not(:last-child)::after {
+    content: "";
+
+    position: absolute;
+
+    top: 24px;
+    right: -6px;
+
+    width: 12px;
+
+    border-top: 1px dashed var(--color-border-strong);
+}
+
+
+.hero-step-icon {
+    width: 50px;
+    height: 50px;
+
+    margin: 0 auto 12px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1.5px solid #a7c4ff;
+    border-radius: 50%;
+
+    background: #f7faff;
+
+    color: var(--color-primary);
+
+    font-size: 20px;
+}
+
+
+.hero-step-icon-accent {
+    border-color: #cfc4ff;
+
+    background: #faf8ff;
+
+    color: var(--color-accent);
+}
+
+
+.hero-step-icon-success {
+    border-color: #b9e6ca;
+
+    background: #f8fff9;
+
+    color: var(--color-success);
+}
+
+
+.hero-step h2 {
+    margin: 0;
+
+    color: var(--color-text);
+
+    font-size: 13px;
+    font-weight: 800;
+
+    line-height: 1.35;
+
+    letter-spacing: -0.015em;
+}
+
+
+.hero-step p {
+    margin-top: 7px;
+
+    color: var(--color-text-soft);
+
+    font-size: 12px;
+
+    line-height: 1.45;
+}
+
+
+/* ---------------------------------------------------------
+   HERO CTA
+   --------------------------------------------------------- */
+
+.hero-cta {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 10px;
+
+    min-height: 56px;
+
+    margin-top: 30px;
+
+    padding: 0 34px;
+
+    border-radius: 10px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #155eef 0%,
+            #2e6cf2 100%
+        );
+
+    color: #ffffff;
+
+    font-size: 15px;
+    font-weight: 800;
+
+    letter-spacing: 0.015em;
+
+    box-shadow:
+        0 10px 26px rgba(21, 94, 239, 0.20);
+
+    transition:
+        transform var(--transition-base),
+        box-shadow var(--transition-base);
+}
+
+.hero-cta:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 15px 32px rgba(21, 94, 239, 0.27);
+}
+
+.hero-cta span {
+    font-size: 19px;
+
+    transition:
+        transform var(--transition-base);
+}
+
+.hero-cta:hover span {
+    transform: translateX(4px);
+}
+
+
+.hero-note {
+    margin-top: 9px;
+
+    color: var(--color-text-muted);
+
+    font-size: 11px;
+}
+
+
+/* ---------------------------------------------------------
+   HERO IMAGE
+   --------------------------------------------------------- */
+
+.hero-visual {
+    position: relative;
+
+    min-width: 0;
+
+    align-self: stretch;
+
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+
+.hero-image-wrap {
+    position: relative;
+
+    width: 100%;
+
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.hero-image {
+    width: 100%;
+    max-width: 470px;
+
+    height: auto;
+
+    object-fit: contain;
+
+    transform: translateX(8px);
+}
+
+
+/* ---------------------------------------------------------
+   TABLET
+   --------------------------------------------------------- */
+
+@media (max-width: 960px) {
+
+    .hero-container {
+        grid-template-columns:
+            minmax(0, 1.55fr)
+            minmax(220px, 0.8fr);
+
+        gap: 10px;
+    }
+
+    .hero-title {
+        font-size: clamp(54px, 7vw, 82px);
+    }
+
+    .hero-eyebrow {
+        font-size: 16px;
+    }
+
+    .hero-step h2 {
+        font-size: 12px;
+    }
+
+    .hero-step p {
+        font-size: 11px;
+    }
+
+}
+
+
+/* ---------------------------------------------------------
+   MOBILE
+   --------------------------------------------------------- */
+
+@media (max-width: 760px) {
+
+    .hero-section {
+        min-height: auto;
+
+        padding: 48px 0 70px;
+    }
+
+    .hero-container {
+        grid-template-columns: 1fr;
+
+        gap: 28px;
+    }
+
+    .hero-copy {
+        order: 1;
+
+        padding-top: 10px;
+    }
+
+    .hero-visual {
+        order: 2;
+
+        justify-content: center;
+    }
+
+    .hero-image {
+        max-width: 420px;
+
+        transform: none;
+    }
+
+    .hero-title {
+        font-size: clamp(48px, 14vw, 72px);
+
+        line-height: 0.95;
+    }
+
+    .hero-steps {
+        gap: 4px;
+    }
+
+    .hero-step {
+        padding: 0 6px;
+    }
+
+    .hero-step:not(:last-child)::after {
+        display: none;
+    }
+
+    .hero-step-icon {
+        width: 42px;
+        height: 42px;
+
+        font-size: 17px;
+    }
+
+    .hero-step h2 {
+        font-size: 10px;
+    }
+
+    .hero-step p {
+        font-size: 10px;
+    }
+
+    .hero-cta {
+        width: 100%;
+        max-width: 380px;
+    }
+}
