@@ -1153,7 +1153,7 @@ button:focus-visible {
 
     object-fit: contain;
 
-    transform: translate(20px, 10px);
+    transform: translate(-120px, 10px);
 }
 
 /* ---------------------------------------------------------
