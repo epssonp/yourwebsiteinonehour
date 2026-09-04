@@ -877,7 +877,7 @@ button:focus-visible {
    ========================================================= */
 
 .hero-section {
-    padding: 20px 0 70px;
+    padding: 10px 0 70px;
     min-height: calc(100vh - var(--header-height));
     min-height: calc(100svh - var(--header-height));
 
@@ -1127,14 +1127,13 @@ button:focus-visible {
 
 .hero-visual {
     position: relative;
-
     min-width: 0;
 
-    align-self: stretch;
-
     display: flex;
-    align-items: flex-end;
+    align-items: center;
     justify-content: flex-end;
+
+    overflow: visible;
 }
 
 .hero-image-wrap {
@@ -1148,16 +1147,14 @@ button:focus-visible {
 }
 
 .hero-image {
-    width: 100%;
-    max-width: 470px;
-
+    width: 680px;
+    max-width: none;
     height: auto;
 
     object-fit: contain;
 
-    transform: translateX(8px);
+    transform: translate(20px, 10px);
 }
-
 
 /* ---------------------------------------------------------
    TABLET
