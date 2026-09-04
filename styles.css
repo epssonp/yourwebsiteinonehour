@@ -877,7 +877,7 @@ button:focus-visible {
    ========================================================= */
 
 .hero-section {
-    padding: 54px 0 70px;
+    padding: 20px 0 70px;
     min-height: calc(100vh - var(--header-height));
     min-height: calc(100svh - var(--header-height));
 
